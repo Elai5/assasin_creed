@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  background-image: url(/assasin_creed/images/back3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+}
+
+section {
+  height: 100vh;
+}
+
+.content {
+  padding: 0 40px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: black;
+}
+
+.logo {
+  float: left;
+}
+
+span {
+  color: red;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  flex: 1;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+li a:hover {
+  color: red;
+}
+
+label #btn,
+label #cancel {
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+
+.text {
+  margin-top: 70px;
+  justify-content: center;
+  left: 50px;
+  top: 50px;
+  position: relative;
+  width: 70%;
+}
+
+.heading {
+  font-size: 55px;
+}
+
+.desc {
+  width: 40%;
+  margin-top: 40px;
+  line-height: 27px;
+}
+
+.desc p {
+  line-height: 39px;
+  /* color: gold; */
+}
+
+.butns {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.butns .btn1,
+.butns .btn2 {
+  padding: 10px 20px;
+  /* Increased padding for better button size */
+  border-radius: 5px;
+  /* Rounded corners */
+  background-color: red;
+  color: white;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Make text uppercase */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for all properties */
+}
+
+.butns .btn1:hover,
+.butns .btn2:hover {
+  background-color: darkred;
+  /* Darker background on hover */
+  border-color: white;
+  /* Add a border on hover */
+  transform: scale(1.05);
+  /* Slightly increase size */
+}
+
+.butns .btn1:focus,
+.butns .btn2:focus {
+  outline: none;
+  /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  /* Add custom focus outline */
+}
+
+.butns .btn1:active,
+.butns .btn2:active {
+  background-color: orangered;
+  /* Maintain dark color when button is pressed */
+  transform: scale(0.98);
+  /* Slightly shrink button on click */
+}
+
+
+
+
+footer {
+  background-color: red;
+  position: relative;
+  top: 100px;
+  /* margin: 0 -30px; */
+}
+
+footer p {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+footer .patners {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+
+section #about {
+  height: 100vh;
+}
+
+.about .background {
+  background-image: url("./../images/Capture7.PNG");
+  opacity: 0.2;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .text {
+    top: -30px;
+    position: relative;
+  }
+
+  .desc {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 860px) {
+  header .btn {
+    display: none;
+  }
+
+  nav {
+    float: right;
+    justify-content: center;
+    display: none;
+  }
+
+  nav ul li a {
+    /* color: aqua; */
+    right: -80px;
+    position: relative;
+  }
+
+  .heading {
+    justify-content: center;
+    left: -35px;
+    position: relative;
+    top: 30px;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+    width: 100%;
+    right: 38px;
+    top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .btn1 {
+    text-transform: lowercase;
+  }
+
+  .btn2 {
+    text-transform: lowercase;
+  }
+}
+
+@media (max-width: 700px) {
+  label #btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    /* width: 100%; */
+    /* height: 100vh; */
+    background: #34495e;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    display: none;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+
+  #check:checked~label #btn {
+    display: none;
+  }
+
+  #check:checked~label #cancel {
+    display: block;
+  }
+
+  .text {
+    left: -21px;
+    /* background-color: violet; */
+  }
+
+  .heading {
+    font-size: 32px;
+    /* float: left; */
+  }
+
+  .desc {
+    font-size: 15px;
+    width: 500%;
+
+    /* background-color: aqua; */
+  }
+
+  body {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .desc {
+    font-size: 22px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-weight: 100;
+    width: 70%;
+  }
+}

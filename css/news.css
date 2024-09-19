@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Poppins&family=Rubik+Moonrocks&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    width: 250px;
+}
+
+span {
+    color: red;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-icon #menu-icon,
+.nav-icon #close-icon {
+    color: white;
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    padding: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.heading span {
+    color: red;
+}
+
+@media (max-width: 425px) {
+    #nav-toggle {
+        display: none;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    #close-icon {
+        display: none;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.904);
+        width: 100%;
+        height: 30vh;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+    }
+
+    #nav-toggle:checked~nav {
+        display: flex;
+    }
+
+    #nav-toggle:checked~.nav-icon #menu-icon {
+        display: none;
+    }
+
+    #nav-toggle:checked~.nav-icon #close-icon {
+        display: block;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .desc {
+        position: relative;
+        top: -150px;
+    }
+}
+
+
+
+#new {
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+}
+
+.blog {
+    background-color: black;
+    height: 100%;
+    padding: 0 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-blog {
+    width: 300px;
+    float: left;
+    position: relative;
+    top: 4px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin: 23px 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.comment:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 6px 20px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transform: scale(1.05) translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment .text {
+    background-color: transparent;
+}
+
+.imge {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.imge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.imge img:hover {
+    border: 2px solid #ff5e5e;
+    transform: scale(1.05);
+}
+
+.comment .text {
+    width: 200px;
+    padding-left: 20px;
+}
+
+.text h3,
+.text p {
+    background-color: transparent;
+    color: #f5f5f5;
+}
+
+.text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #ff5e5e;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text p {
+    font-size: 16px;
+    margin-top: 0;
+    color: #f5f5f5;
+    font-family: 'Lora', serif;
+}
+
+.main-blog {
+    width: 800px;
+    margin: 55px 42px;
+}
+
+.heading h3 {
+    font-size: 24px;
+    color: coral;
+    text-align: center;
+    /* display: none; */
+}
+
+.news {
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.pic {
+    width: 350px;
+    margin: 12px 2px;
+    overflow: hidden;
+}
+
+.pic img {
+    border-radius: 5px;
+    transition: transorm 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pic img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.more-info {
+    width: 350px;
+    margin-left: 20px;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.more-info p {
+    font-size: 19px;
+    line-height: 24px;
+}
+
+.right-blog {
+    width: 350px;
+    position: relative;
+    top: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+/* .part {
+    background-color: rgba(255, 255, 255, 0.05);
+} */
+
+.post {
+    font-family: cursive;
+    line-height: 28px;
+}
+
+.post p {
+    text-indent: 13px;
+    font-size: 19px;
+}
+
+.post h2 {
+    color: coral
+}
+
+.box {
+    margin: 8px 0px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-icon {
+    width: 80px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.box-icon h2 {
+    color: coral;
+    font-size: 42px;
+    margin-right: 12px;
+}
+
+.box-info {
+    margin: 7px 25px;
+    font-size: 18px;
+}
+
+.box:hover {
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/* For devices with a maximum width of 425px */
+@media (max-width: 425px) {
+
+    /* Make the blog section stack vertically */
+    .blog {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    /* Adjust side-blog to take up full width on mobile */
+    .side-blog,
+    .main-blog,
+    .right-blog {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* Adjust the news section to stack images and text vertically */
+    .news {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0;
+    }
+
+    .pic,
+    .more-info {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .pic img {
+        width: 100%;
+    }
+
+    /* Adjust the box layout for upcoming events */
+    .box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .box-icon {
+        width: 100%;
+        /* margin-bottom: 10px; */
+    }
+
+    .box-info {
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Adjust text sizes for better readability on small screens */
+    .text h3 {
+        font-size: 16px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    .more-info {
+        padding: 0 10px;
+        /* text-align: center; */
+    }
+
+    .more-info p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    /* Adjust the comment section for mobile */
+    .comment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .imge {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text {
+        width: 100%;
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    .box {
+        padding: 8px;
+        margin: 5px 0;
+    }
+
+    .box-icon {
+        width: 60px;
+        /* Reduce width for the icon */
+    }
+
+    .box-icon h2 {
+        font-size: 30px;
+        /* Make the font size smaller */
+    }
+
+    .box-info {
+        font-size: 16px;
+        width: 80%;
+        /* Reduce the text size */
+    }
+
+    /* Make the comment section smaller */
+    .comment {
+        margin: 15px 2px;
+        /* Reduce the margin */
+        padding: 8px;
+        /* Reduce padding */
+    }
+
+    .imge {
+        width: 60px;
+        /* Make the image smaller */
+        height: 60px;
+    }
+
+    .text h3 {
+        font-size: 14px;
+        /* Reduce heading font size */
+    }
+
+    .text p {
+        font-size: 12px;
+        /* Reduce paragraph font size */
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:860px) {
+    #nav-toggle {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+    }
+
+    .right-blog {
+        padding-left: 20px;
+        background-color: rgba(0, 0, 0, 0.19);
+
+        /* background-color: blue; */
+    }
+}

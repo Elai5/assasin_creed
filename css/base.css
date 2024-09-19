@@ -1,0 +1,398 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    background-image: url(/images/back3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    /* overflow: hidden; */
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+.logo {
+    color: white;
+}
+
+.logo span {
+    color: red;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-icon #menu-icon,
+.nav-icon #close-icon {
+    color: white;
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    padding: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.heading span {
+    color: red;
+}
+
+/* Mobile Styles */
+@media (max-width: 425px) {
+    #nav-toggle {
+        display: none;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    #close-icon {
+        display: none;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.904);
+        width: 100%;
+        height: 30vh;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+    }
+
+    #nav-toggle:checked~nav {
+        display: flex;
+    }
+
+    #nav-toggle:checked~.nav-icon #menu-icon {
+        display: none;
+    }
+
+    #nav-toggle:checked~.nav-icon #close-icon {
+        display: block;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .desc {
+        position: relative;
+        top: -150px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width:860px) {
+    #nav-toggle {
+        display: none;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .desc {
+        padding-top: 150px;
+        width: 100%;
+    }
+
+    .desc p {
+        text-align: justify;
+        padding: 0 40px;
+        width: 700px;
+    }
+}
+
+.text {
+    margin-top: 70px;
+    justify-content: center;
+    left: 50px;
+    top: 50px;
+    position: relative;
+    width: 80%;
+}
+
+.heading {
+    font-size: 55px;
+}
+
+.desc {
+    width: 50%;
+    margin-top: 40px;
+    line-height: 27px;
+}
+
+.desc p {
+    line-height: 39px;
+    font-size: 24px;
+}
+
+.butns {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.butns .btn1,
+.butns .btn2 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: 2px solid transparent;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.butns .btn1:hover,
+.butns .btn2:hover {
+    background-color: white;
+    border-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.butns .btn1:focus,
+.butns .btn2:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.butns .btn1:active,
+.butns .btn2:active {
+    background-color: orangered;
+    transform: scale(0.98);
+}
+
+
+footer {
+    background-color: red;
+    position: relative;
+    top: 100px;
+}
+
+footer p {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer .patners {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1024px) {
+    .text {
+        width: 90%;
+        left: 40;
+        padding-left: 40px;
+    }
+
+    .heading {
+        font-size: 60px;
+        font-weight: bold;
+        /* text-indent: 40px; */
+        padding-left: 20px;
+    }
+
+    .desc {
+        width: 80%;
+        margin-top: 70px;
+    }
+
+    .desc p {
+        line-height: 40px;
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .butns {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .butns .btn1,
+    .butns .btn2 {
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        width: 80%;
+        padding: 20px;
+        /* background-color: red; */
+        /* margin-top: 50px; */
+    }
+
+    .heading {
+        font-size: 65px;
+        font-weight: bold;
+        /* padding-left: 60px; */
+        /* text-indent: 40px; */
+        text-align: center;
+    }
+
+    .desc {
+        width: 100%;
+        margin-top: -10px;
+        text-align: center;
+    }
+
+    .desc p {
+        font-size: 19px;
+        line-height: 34px;
+        width: 100%;
+        margin-top: -80px;
+    }
+
+    .butns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-direction: row;
+        position: relative;
+        left: 40px;
+    }
+
+    .butns .btn1,
+    .butns .btn2 {
+        width: 80%;
+    }
+}
+
+@media (max-width: 425px) {
+    .text {
+        width: 95%;
+        margin-top: -40px;
+        left: 0;
+        padding: 30px;
+    }
+
+    .heading {
+        font-size: 35px;
+        text-align: center;
+        color: red;
+        margin-top: 60px;
+    }
+
+    .desc {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .desc p {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: justify;
+        margin-top: 300px;
+    }
+
+    .butns {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        left: 0;
+    }
+
+    .butns .btn1,
+    .butns .btn2 {
+        width: 100%;
+        padding: 8px 0;
+        font-size: 14px;
+    }
+}
