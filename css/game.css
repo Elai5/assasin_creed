@@ -509,48 +509,7 @@ button {
     color: #fff;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .game-grid {
-        grid-template-columns: 1fr;
-    }
-    .game-card{
-        width: 100%;
-    }
 
-    .game-info h3 {
-        font-size: 20px;
-    }
-
-    .game-info p {
-        font-size: 12px;
-    }
-
-    .read-more {
-        padding: 8px 10px;
-    }
-}
-
-@media (max-width: 425px) {
-    #game-portfolio {
-        padding: 10px;
-    }
-
-    .section-title {
-        font-size: 20px;
-    }
-
-    .game-grid {
-        /* background-color: blue; */
-        width: 100%;
-    }
-
-    .game-card {
-        width: 90%;
-        /* background-color: #45a049; */
-        height: auto;
-    }
-}
 
 .quiz-container {
     display: flex;
@@ -602,4 +561,54 @@ label {
 
 .quiz-container button:hover {
     background-color: #d62839;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-card {
+        width: 100%;
+    }
+
+    .game-info h3 {
+        font-size: 20px;
+    }
+
+    .game-info p {
+        font-size: 12px;
+    }
+
+    .read-more {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    #game-portfolio {
+        padding: 0px;
+        /* justify-content: center; */
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .game-grid {
+        /* background-color: blue; */
+        width: 100%;
+    }
+
+    .game-card {
+        width: 90%;
+        /* background-color: #45a049; */
+        height: auto;
+    }
+
+    .quiz-container {
+        width: 100;
+        border: 0;
+    }
 }
