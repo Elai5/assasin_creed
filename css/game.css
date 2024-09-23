@@ -397,7 +397,6 @@ footer .patners {
 #game-portfolio {
     padding: 50px;
     background-color: #111;
-    /* Dark background for contrast */
     color: #fff;
 }
 
@@ -412,6 +411,7 @@ footer .patners {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    margin: 40px;
 }
 
 .game-card {
@@ -445,17 +445,34 @@ footer .patners {
     line-height: 1.6;
 }
 
-.read-more {
-    background-color: red;
-    color: #fff;
-    padding: 10px 15px;
+button {
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.read-more {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .read-more:hover {
-    background-color: darkred;
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.buy-now {
+    background-color: #ff4500;
+    color: white;
+    font-weight: bold;
+}
+
+.buy-now:hover {
+    background-color: #e63900;
+    transform: scale(1.05);
 }
 
 /* Modal CSS */
@@ -507,4 +524,71 @@ footer .patners {
     .read-more {
         padding: 8px 10px;
     }
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    /* Adjust as needed */
+    padding: 20px;
+    width: 80%;
+    /* Adjust width as necessary */
+    max-width: 600px;
+    /* Limit max width for better appearance */
+    border: 1px solid #ccc;
+    /* Optional: Add border for better visibility */
+    border-radius: 8px;
+    /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for depth */
+}
+
+.question {
+    margin-bottom: 15px;
+    /* Space between questions */
+}
+
+label {
+    display: block;
+    /* Make labels block elements */
+    background: #444;
+    /* Slightly lighter background */
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quiz-container button {
+    background-color: #e63946;
+    /* Button color */
+    color: #ffffff;
+    /* White text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    /* Center button */
+    margin: 20px auto;
+}
+
+.quiz-container button:hover {
+    background-color: #d62839;
+    /* Darker shade on hover */
 }
