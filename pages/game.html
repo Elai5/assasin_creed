@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="/css/game.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h3 class="logo"><span>ASSASIN</span> CREED</h3>
+        <input type="checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="nav-icon">
+            <i class="fas fa-bars" id="menu-icon"></i>
+            <i class="fas fa-times" id="close-icon"></i>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/work.html">Game Portfolio</a></li>
+                <li><a href="/pages/news.html">News</a></li>
+            </ul>
+        </nav>
+        <button class="btn">Register</button>
+    </header>
+    <section id="game-portfolio">
+        <h2 class="section-title">Assassin's Creed Games</h2>
+        <div class="game-grid">
+            <!-- Game Card 1 -->
+            <div class="game-card">
+                <img src="/images/assassins-creed-odyssey-review.jpg" alt="Assassin's Creed 1">
+                <div class="game-info">
+                    <h3>Assassin's Creed 1</h3>
+                    <p>Release Year: 2007</p>
+                    <p>Step into the shoes of Altair in this action-packed historical adventure.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+            </div>
+
+            <!-- Game Card 2 -->
+            <div class="game-card">
+                <img src="/images/Capture3.PNG" alt="Assassin's Creed Valhalla">
+                <div class="game-info">
+                    <h3>Assassin's Creed Valhalla</h3>
+                    <p>Release Year: 2020</p>
+                    <p>Join Eivor and lead your clan in epic Viking raids and battles.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+            </div>
+
+            <!-- Add more game cards as needed -->
+            <div class="game-card">
+                <img src="/images/Capture4.PNG" alt="Assassin's Creed Valhalla">
+                <div class="game-info">
+                    <h3>Assassin's Creed Valhalla</h3>
+                    <p>Release Year: 2020</p>
+                    <p>Join Eivor and lead your clan in epic Viking raids and battles.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="/images/Capture9.PNG" alt="Assassin's Creed Valhalla">
+                <div class="game-info">
+                    <h3>Assassin's Creed Valhalla</h3>
+                    <p>Release Year: 2020</p>
+                    <p>Join Eivor and lead your clan in epic Viking raids and battles.</p>
+                    <button class="read-more">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Game Title</h2>
+            <p>More details about the game...</p>
+        </div>
+    </div>
+
+</body>
+<script src="/js/script.js"></script>
+
+</html>
