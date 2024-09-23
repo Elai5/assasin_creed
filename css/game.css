@@ -419,6 +419,8 @@ footer .patners {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    width: 400px;
+    height: 471px;
 }
 
 .game-card:hover {
@@ -512,6 +514,9 @@ button {
     .game-grid {
         grid-template-columns: 1fr;
     }
+    .game-card{
+        width: 100%;
+    }
 
     .game-info h3 {
         font-size: 20px;
@@ -526,43 +531,53 @@ button {
     }
 }
 
+@media (max-width: 425px) {
+    #game-portfolio {
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .game-grid {
+        /* background-color: blue; */
+        width: 100%;
+    }
+
+    .game-card {
+        width: 90%;
+        /* background-color: #45a049; */
+        height: auto;
+    }
+}
+
 .quiz-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 20px auto;
-    /* Adjust as needed */
     padding: 20px;
     width: 80%;
-    /* Adjust width as necessary */
     max-width: 600px;
-    /* Limit max width for better appearance */
     border: 1px solid #ccc;
-    /* Optional: Add border for better visibility */
     border-radius: 8px;
-    /* Optional: Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Optional: Add shadow for depth */
 }
 
 .question {
     margin-bottom: 15px;
-    /* Space between questions */
 }
 
 label {
     display: block;
-    /* Make labels block elements */
     background: #444;
-    /* Slightly lighter background */
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     margin: 5px;
-    /* Change cursor to pointer on hover */
     transition: background-color 0.3s ease;
-    /* Smooth transition */
 }
 
 .result {
@@ -574,9 +589,7 @@ label {
 
 .quiz-container button {
     background-color: #e63946;
-    /* Button color */
     color: #ffffff;
-    /* White text */
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -584,11 +597,9 @@ label {
     font-size: 16px;
     transition: background-color 0.3s ease;
     display: block;
-    /* Center button */
     margin: 20px auto;
 }
 
 .quiz-container button:hover {
     background-color: #d62839;
-    /* Darker shade on hover */
 }
