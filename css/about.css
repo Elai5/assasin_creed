@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&family=Poppins&family=Rubik+Moonrocks&display=swap');
+
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +15,7 @@
 body {
     background-color: black;
     color: whitesmoke;
-    background-image: url(/assasin_creed/images/back3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     font-family: Arial, sans-serif;
-    /* overflow: hidden; */
     height: 100vh;
 }
 
@@ -26,14 +24,16 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: black;
+    background-color: #000;
+    width: 100%;
 }
 
 .logo {
     color: white;
+    width: 250px;
 }
 
-.logo span {
+span {
     color: red;
 }
 
@@ -54,6 +54,8 @@ header {
 
 nav {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 nav ul {
@@ -94,7 +96,6 @@ nav a:hover {
     color: red;
 }
 
-/* Mobile Styles */
 @media (max-width: 425px) {
     #nav-toggle {
         display: none;
@@ -156,10 +157,6 @@ nav a:hover {
         display: none;
     }
 
-    .desc {
-        position: relative;
-        top: -150px;
-    }
 
 }
 
@@ -168,18 +165,263 @@ nav a:hover {
         display: none;
     }
 
-    .text {
+    header {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+
+    nav {
+        display: flex;
         width: 100%;
+        justify-content: space-around;
+
+    }
+
+}
+
+.about {
+    padding: 10px;
+    /* background-color: green; */
+    height: auto;
+}
+
+.imagy {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+
+}
+
+video {
+    /* border: 1px solid red;border: 2px solid red; */
+    border-radius: 10px;
+    /* Add rounding for a softer look */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Slightly transparent white background */
+    padding: 8px;
+}
+
+.desc {
+    width: 90%;
+    padding: 20px;
+    border: 2px solid grey;
+    /* Slightly thicker border */
+    border-radius: 15px;
+    /* background-color: rgba(255, 255, 0, 0.2); */
+    /* Slightly transparent yellow */
+    margin-left: 20px;
+    /* Space between video and description */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow for depth */
+}
+
+/* .desc {
+   
+    width: 90%;
+    padding: 0 20px;
+    border: 1px solid grey;
+    border-radius: 15px;
+} */
+
+.desc h2 {
+    font-size: 30px;
+    font-family: 'Rubik Moonrocks', cursive;
+    font-family: 'Frank Ruhl Libre', serif;
+    text-align: center;
+    color: #000;
+}
+
+.desc h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.desc h3,
+.descspan {
+    font-size: 32px;
+    margin-top: 20px;
+    text-align: center;
+    /* color: #000; */
+}
+
+.desc h2,
+h3,
+p,
+span {
+    background-color: transparent;
+    line-height: 23px;
+}
+
+.desc p {
+    float: right;
+    word-wrap: break-word;
+    /* color: #000; */
+    color: azure;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: monospace;
+    /* width: 700px; */
+    margin-bottom: 40px;
+}
+
+.heading,
+h2 {
+
+    background-color: transparent;
+}
+
+a {
+    background-color: transparent;
+}
+
+.action {
+    background-color: transparent;
+    width: 70%;
+    display: inline-block;
+    justify-content: center;
+    margin: 0 120px;
+}
+
+.btn3 {
+    margin: 0 30px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: red;
+    color: white;
+    /* box-shadow: 10px 10px firebrick; */
+    transition: 0.5s;
+    cursor: pointer;
+    /* float:right; */
+
+}
+
+.btn3:hover {
+    transform: translate(5px, 12px);
+    position: relative;
+    border: 2px solid black;
+
+}
+
+.extra {
+    justify-content: space-between;
+    /* position: absolute; */
+    position: relative;
+    top: 110px;
+    background: transparent;
+    /* right:23px; */
+    /* background-color: antiquewhite; */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin: 20px; */
+    background: transparent;
+    /* background-color: red; */
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    width: 400px;
+    border-radius: 5px;
+    background-color: transparent;
+    /* height: fit-content; */
+    /* border: 1px solid wheat; */
+    margin: 6px;
+}
+
+.box img {
+    /* height: 240px; */
+    border-radius: 5px;
+
+}
+
+.box:hover {
+    transform: scale(1.05);
+    top: 5px;
+    border: 1px solid wheat;
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .imagy {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .profile {
+        display: block;
+        /* margin-top: 120px; */
     }
 
     .desc {
-        padding-top: 150px;
-        width: 100%;
+        margin-top: 10px;
+        text-align: justify;
+        /* width: 100%; */
+        /* height: 400px; */
+        border: 0;
+    }
+
+    .desc h3,
+    span {
+        margin-top: 5px;
+        font-size: 26px;
     }
 
     .desc p {
+        line-height: 30px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .desc .action {
+        position: relative;
+        display: flex;
+    }
+
+    .extra {
+        float: left;
+        display: flex;
+        position: relative;
+    }
+
+    .box {
+        width: 300px;
+    }
+}
+
+@media (max-width: 425px) {
+    .imagy {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desc {
+        margin-top: 10px;
         text-align: justify;
-        padding: 0 40px;
-        width: 700px;
+        width: 90%;
+        /* height: 500px; */
+        border: 0;
+        /* padding: 0 10px; */
+    }
+
+    .desc h3,
+    span {
+        margin-top: 5px;
+        font-size: 17px;
+    }
+
+    .desc p {
+        font-size: 13.5px;
+    }
+
+    .desc .action {
+        position: relative;
+        display: flex;
+        right: 100px;
     }
 }
