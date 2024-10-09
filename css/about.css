@@ -383,6 +383,7 @@ a {
 
     .desc p {
         font-size: 13.5px;
+        text-align: start;
     }
 
     .desc .action {

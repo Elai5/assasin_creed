@@ -588,8 +588,10 @@ label {
 
 @media (max-width: 425px) {
     #game-portfolio {
-        padding: 0px;
-        /* justify-content: center; */
+        padding: 5px;
+        justify-content: center;
+        /* background-color: gold; */
+        margin-left: -20px;
     }
 
     .section-title {
@@ -598,7 +600,7 @@ label {
 
     .game-grid {
         /* background-color: blue; */
-        width: 100%;
+        width: 90%;
     }
 
     .game-card {
