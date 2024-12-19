@@ -440,6 +440,12 @@ footer .patners {
 .game-info h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: orangered;
+}
+
+strong {
+    font-weight: bolder;
+    /* color: red; */
 }
 
 .game-info p {
