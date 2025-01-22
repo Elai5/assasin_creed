@@ -1,5 +1,4 @@
-# assasin-creed
-## Assassin's Creed Gaming Website
+# Assassin's Creed Gaming Website
 
 This **Assassin’s Creed Gaming Website** is a dynamic hub designed for fans of the Assassin's Creed series, blending vibrant colors and engaging content tailored for gamers and enthusiasts of the movie and game franchise.
 
