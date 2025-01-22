@@ -37,15 +37,9 @@ This **Assassin’s Creed Gaming Website** is a dynamic hub designed for fans of
      git clone <repository-url>
      cd assassin-creed-website
      ```
-  2. Install dependencies:
-     ```bash
-     npm install
-     ```
-  3. Start the development server:
-     ```bash
-     npm start
-     ```
-  4. Access the website at `http://localhost:3000`.
+   
+  2. Access the website at `http://localhost:3000`.
+  3. If you are using vscode, open with liveserver.
 
 ### Contributing:
 
@@ -56,3 +50,13 @@ To contribute to this project:
 2. Create a new branch:
    ```bash
    git checkout -b feature-branch
+   Submit a pull request for review.
+Feel free to contribute by suggesting enhancements, fixing bugs, or adding new features to the project.
+
+Future Enhancements:
+Dynamic Features:
+Introduce a "Live Arena" where users can view live characters, change costumes, and interact with maps.
+Include a field demo for characters to move around, offering an interactive interface with cards/characters.
+vbnet
+
+
